@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import TripsList from "./components/TripsList";
 import TripDetail from "./components/TripDetail";
 import { Route, Routes } from "react-router-dom";
+const detailId = 2;
 function App() {
   return (
     <div id="page-top">
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="tripslist" element={<TripsList />} />
-        <Route path="tripdetail" element={<TripDetail />} />
+        <Route path="details/:detailId" element={<TripDetail />} />
       </Routes>
     </div>
   );
