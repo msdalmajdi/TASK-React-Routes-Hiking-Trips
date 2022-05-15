@@ -1,9 +1,9 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function TripItem({ trip }) {
   return (
-    <Link to={`/details/${trip.slug}`}>
-      <div className="col-md-6 col-lg-4 mb-5">
+    <div className="col-md-6 col-lg-4 mb-5">
+      <Link to={`/details/${trip.slug}`}>
         <div
           className="portfolio-item mx-auto"
           data-bs-toggle="modal"
@@ -16,8 +16,8 @@ function TripItem({ trip }) {
           </div>
           <img className="img-fluid" src={trip.img} alt="..." />
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
