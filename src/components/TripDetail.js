@@ -4,7 +4,8 @@ import { useParams, Navigate } from "react-router-dom";
 
 function TripDetail() {
   const tripIdM = useParams().detailId;
-  const trip = tripsData.find((trip) => trip.id == tripIdM);
+  const trip = tripsData.find((trip) => trip.slug == tripIdM);
+
   if (!trip) return <Navigate to="/tripslist" />;
   return (
     <div className="modal-dialog modal-xl">

@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 function TripItem({ trip }) {
   return (
-    <Link to={`/details/${trip.id}`}>
+    <Link to={`/details/${trip.slug}`}>
       <div className="col-md-6 col-lg-4 mb-5">
         <div
           className="portfolio-item mx-auto"
